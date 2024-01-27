@@ -22,6 +22,16 @@ const Button: React.FC<IButton> = (props) => {
       </button>
     );
   }
+  if (variant === "secondary") {
+    return (
+      <button
+        className="flex items-center bg-blue-700 rounded-md shadow-xl text-white px-3 py-2 font-bold hover:bg-blue-500 hover:shadow-none transition"
+        {...rest}
+      >
+        {children}
+      </button>
+    );
+  }
   return <button {...rest}>{children}</button>;
 };
 
