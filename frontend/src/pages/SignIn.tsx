@@ -76,7 +76,7 @@ const SignIn = () => {
           </Link>
         </span>
         <Button type="submit" variant="secondary">
-          Sign In
+          Login
         </Button>
       </span>
     </form>
