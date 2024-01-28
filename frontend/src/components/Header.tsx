@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import Button from "./ui/Button";
 import { useAppContext } from "../contexts/AppContext";
+import SignOut from "./SignOut";
 
 const Header = () => {
   const { isLoggedIn } = useAppContext();
@@ -14,18 +15,19 @@ const Header = () => {
         <span className="flex space-x-2">
           {isLoggedIn ? (
             <>
-              <Button
-                variant="primary"
-                onClick={() => navigate("/my-bookings")}
+              <Link
+                to="/my-bookings"
+                className="px-3 py-2 font-bold text-white hover:bg-blue-500 hover:shadow-lg transition rounded-md"
               >
                 My Bookings
-              </Button>
-              <Button variant="primary" onClick={() => navigate("/my-hotels")}>
+              </Link>
+              <Link
+                to="/my-hotels"
+                className="px-3 py-2 font-bold text-white hover:bg-blue-500 hover:shadow-lg transition rounded-md"
+              >
                 My Hotels
-              </Button>
-              <Button variant="primary" onClick={() => {}}>
-                Sign Out
-              </Button>
+              </Link>
+              <SignOut />
             </>
           ) : (
             <>
