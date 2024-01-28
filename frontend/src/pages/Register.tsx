@@ -84,11 +84,6 @@ const Register = () => {
               value: 6,
               message: "Password should be atleast 6 characters.",
             },
-            validate: (val) => {
-              if (watch("password") !== val) {
-                return "Your passwords do not match.";
-              }
-            },
           })}
         />
         {errors.password && (
@@ -105,6 +100,11 @@ const Register = () => {
             minLength: {
               value: 6,
               message: "Password should be atleast 6 characters.",
+            },
+            validate: (val) => {
+              if (watch("password") !== val) {
+                return "Your passwords do not match.";
+              }
             },
           })}
         />
