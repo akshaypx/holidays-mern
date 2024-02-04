@@ -27,12 +27,6 @@ const Header = () => {
               >
                 My Hotels
               </Link>
-              <Link
-                to="/add-hotel"
-                className="px-3 py-2 font-bold text-white hover:bg-blue-500 hover:shadow-lg transition rounded-md"
-              >
-                Add Hotel
-              </Link>
               <SignOut />
             </>
           ) : (
